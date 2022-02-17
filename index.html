@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/webpack.css?20220121_1">
+    <title>紙娃娃</title>
+    <style>
+        .stop-scrolling {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="stop-scrolling">
+    <main id="vueApp" class="container">
+        <section id="loading"></section>
+        <section id="game">
+            <img id="left" src="./img/house/left/0.png" alt="" class="d-none">
+            <img id="middle" src="./img/house/middle/0.png" alt="" class="d-none">
+            <img id="floor" src="./img/house/floor/1.png" alt="" class="d-none">
+            <img id="right" src="./img/house/right/0.png" alt="" class="d-none">
+            <a href="#" class="save" @click="save();">儲存</a>
+            <a id="download" class="d-none" href="#" download>下載</a>
+            <!-- 畫布 -->
+            <section class="house">
+                <img class="house__item" src="./img/house/left/1.png" alt="wall">
+                <img class="house__item" src="./img/house/right/1.png" alt="wall">
+                <img class="house__item" src="./img/house/middle/1.png" alt="wall">
+                <img class="house__item" src="./img/house/floor/1.png" alt="floor">
+            </section>
+            <canvas id="canvaspanel"></canvas>
+            <!-- 列表 -->
+            <ul class="list p-3">
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-sofa-1.png" alt="sofa" data-type="sofa">
+                </li>
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-people.png" alt="people" data-type="people">
+                </li>
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-pet.png" alt="pet" data-type="pet">
+                </li>
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-flower.png" alt="flower" data-type="flower">
+                </li>
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-paint.png" alt="paint" data-type="paint">
+                </li>
+                <li>
+                    <img class="list__item" src="./img/icon/Icon-floor.png" alt="floor" data-type="floor">
+                </li>
+            </ul>
+            <!-- 素材 -->
+            <section class="material container-fluid px-3">
+                <article class="material__type row" style="display: flex;"></article>
+                <article class="material__type row" style="display: none;"></article>
+                <article class="material__type row" style="display: none;"></article>
+                <article class="material__type row" style="display: none;"></article>
+                <article class="material__type row" style="display: none;"></article>
+                <article class="material__type row" style="display: none;"></article>
+            </section>
+        </section>
+    </main>
+    <script src="./js/tools/fabric.js?20220121_1"></script>
+    <script src="./js/index.js?20220121_1"></script>
+</body>
+
+</html>
